@@ -1,2 +1,5 @@
+vendor/
+
 fbid.txt
 fbid-secret.txt
+settings.yaml
