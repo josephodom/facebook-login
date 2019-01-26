@@ -5,5 +5,6 @@ $twig = new Twig_Environment($twigLoader, [
 	'cache' => './twig/cache/',
 	'debug' => $settings['app']['debug'],
 ]);
+$twig->addGlobal('documentRoot', $settings['app']['root']);
 
 ?>

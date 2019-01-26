@@ -21,6 +21,10 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 <html lang=\"en\">
 
 <head>
+<base href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, ($context["documentRoot"] ?? null), "html", null, true);
+        echo "\">
 <meta charset=\"utf-8\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <title>Facebook Login API Example</title>
@@ -39,18 +43,28 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 <main id=\"main\">
 \t<div class=\"container\">
 \t\t";
-        // line 22
-        $this->displayBlock('body', $context, $blocks);
         // line 23
+        $this->displayBlock('body', $context, $blocks);
+        // line 24
         echo "\t</div>
 </main>
 
 <footer id=\"footer\">
 \t<div class=\"container\">
-\t\t&copy; Joseph Odom ";
-        // line 28
+\t\t<p>
+\t\t\t&copy; Joseph Odom ";
+        // line 30
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "
+\t\t</p>
+\t\t
+\t\t<p>
+\t\t\t<a href=\"./\">Home</a>
+\t\t\t|
+\t\t\t<a href=\"./privacy_policy\">
+\t\t\t\tPrivacy Policy
+\t\t\t</a>
+\t\t</p>
 \t</div>
 </footer>
 
@@ -59,7 +73,7 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 </html>";
     }
 
-    // line 22
+    // line 23
     public function block_body($context, array $blocks = array())
     {
     }
@@ -76,7 +90,7 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 
     public function getDebugInfo()
     {
-        return array (  63 => 22,  52 => 28,  45 => 23,  43 => 22,  20 => 1,);
+        return array (  77 => 23,  57 => 30,  49 => 24,  47 => 23,  26 => 5,  20 => 1,);
     }
 
     public function getSourceContext()
@@ -85,6 +99,7 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 <html lang=\"en\">
 
 <head>
+<base href=\"{{ documentRoot }}\">
 <meta charset=\"utf-8\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <title>Facebook Login API Example</title>
@@ -108,7 +123,17 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 
 <footer id=\"footer\">
 \t<div class=\"container\">
-\t\t&copy; Joseph Odom {{ 'now'|date('Y') }}
+\t\t<p>
+\t\t\t&copy; Joseph Odom {{ 'now'|date('Y') }}
+\t\t</p>
+\t\t
+\t\t<p>
+\t\t\t<a href=\"./\">Home</a>
+\t\t\t|
+\t\t\t<a href=\"./privacy_policy\">
+\t\t\t\tPrivacy Policy
+\t\t\t</a>
+\t\t</p>
 \t</div>
 </footer>
 

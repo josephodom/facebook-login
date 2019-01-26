@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block body %}
+	<div class="card">
+		<div class="card-body">
+			<h2>Not Logged In</h2>
+			
+			<p>Would you like to log in via Facebook? It'll give me your full name &amp; profile picture.</p>
+			
+			<p>
+				(This app doesn't permanently store anything, it only uses a <code>$_SESSION</code>)
+			</p>
+			
+			<a href="./login" class="btn btn-primary">
+				Log In
+			</a>
+		</div>
+	</div>
+{% endblock %}

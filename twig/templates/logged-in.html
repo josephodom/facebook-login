@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block body %}
+	<div class="card">
+		<div class="card-body">
+			<p>
+				<img src="./photo" alt="{{ user.name }}'s photo">
+			</p>
+			
+			<p>
+				Welcome, {{ user.name }}!
+			</p>
+			
+			<a href="./logout" class="btn btn-warning">
+				Log Out
+			</a>
+		</div>
+	</div>
+{% endblock %}

@@ -16,6 +16,9 @@ foreach([
 	// Set up the session
 	'includes/session',
 	
+	// Get the facebook helper classes
+	'includes/facebook',
+	
 	// Monolith controller class that holds all the pages
 	'includes/controller',
 ] as $file){
@@ -23,8 +26,15 @@ foreach([
 }
 
 /**
+ * Determine what page is being accessed
+ */
+if(empty($page = $_GET['page'])){
+	$page = 'index';
+}
+
+/**
  * Display the page
  */
-echo Controller::Execute('test');
+echo Controller::Execute($page);
 
 ?>

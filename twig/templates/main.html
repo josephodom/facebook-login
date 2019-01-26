@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<base href="{{ documentRoot }}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Facebook Login API Example</title>
@@ -25,7 +26,17 @@
 
 <footer id="footer">
 	<div class="container">
-		&copy; Joseph Odom {{ 'now'|date('Y') }}
+		<p>
+			&copy; Joseph Odom {{ 'now'|date('Y') }}
+		</p>
+		
+		<p>
+			<a href="./">Home</a>
+			|
+			<a href="./privacy_policy">
+				Privacy Policy
+			</a>
+		</p>
 	</div>
 </footer>
 

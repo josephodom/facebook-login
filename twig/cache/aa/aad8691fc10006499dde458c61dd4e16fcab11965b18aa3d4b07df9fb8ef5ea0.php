@@ -1,14 +1,14 @@
 <?php
 
-/* 404.html */
-class __TwigTemplate_865b412c2f9d110805c611731aeecdf8846654c36c37902f5973e521c37da635 extends Twig_Template
+/* 500.html */
+class __TwigTemplate_988948ff5e9a0441cdeb674d9efb0e334e35fcd601c053bdce668eed8e1bce13 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("main.html", "404.html", 1);
+        $this->parent = $this->loadTemplate("main.html", "500.html", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -28,13 +28,12 @@ class __TwigTemplate_865b412c2f9d110805c611731aeecdf8846654c36c37902f5973e521c37
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "\t<h2>
-\t\t404 Error
-\t</h2>
-\t
-\t<div class=\"card\">
+        echo "\t<div class=\"card\">
 \t\t<div class=\"card-body\">
-\t\t\tThe page you requested could not be found.
+\t\t\t";
+        // line 6
+        echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
+        echo "
 \t\t</div>
 \t</div>
 ";
@@ -42,7 +41,7 @@ class __TwigTemplate_865b412c2f9d110805c611731aeecdf8846654c36c37902f5973e521c37
 
     public function getTemplateName()
     {
-        return "404.html";
+        return "500.html";
     }
 
     public function isTraitable()
@@ -52,7 +51,7 @@ class __TwigTemplate_865b412c2f9d110805c611731aeecdf8846654c36c37902f5973e521c37
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,  11 => 1,);
+        return array (  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -60,15 +59,11 @@ class __TwigTemplate_865b412c2f9d110805c611731aeecdf8846654c36c37902f5973e521c37
         return new Twig_Source("{% extends \"main.html\" %}
 
 {%block body %}
-\t<h2>
-\t\t404 Error
-\t</h2>
-\t
 \t<div class=\"card\">
 \t\t<div class=\"card-body\">
-\t\t\tThe page you requested could not be found.
+\t\t\t{{ message }}
 \t\t</div>
 \t</div>
-{% endblock %}", "404.html", "C:\\xampp\\htdocs\\portfolio\\facebook\\twig\\templates\\404.html");
+{% endblock %}", "500.html", "C:\\xampp\\htdocs\\portfolio\\facebook\\twig\\templates\\500.html");
     }
 }
