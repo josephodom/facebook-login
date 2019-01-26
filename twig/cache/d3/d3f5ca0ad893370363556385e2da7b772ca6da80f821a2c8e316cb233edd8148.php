@@ -10,6 +10,7 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
         $this->parent = false;
 
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
         );
     }
 
@@ -22,27 +23,45 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 <head>
 <meta charset=\"utf-8\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-<title>";
-        // line 7
-        echo twig_escape_filter($this->env, ($context["title"] ?? null), "html", null, true);
-        echo "</title>
+<title>Facebook Login API Example</title>
 <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\">
+<link rel=\"stylesheet\" href=\"assets/css/frontend.css\">
 </head>
 
 <body>
 
 <header id=\"header\">
 \t<div class=\"container\">
-\t\t<h1>";
-        // line 15
-        echo twig_escape_filter($this->env, ($context["title"] ?? null), "html", null, true);
-        echo "</h1>
+\t\t<h1>Facebook Login API Example</h1>
 \t</div>
 </header>
+
+<main id=\"main\">
+\t<div class=\"container\">
+\t\t";
+        // line 22
+        $this->displayBlock('body', $context, $blocks);
+        // line 23
+        echo "\t</div>
+</main>
+
+<footer id=\"footer\">
+\t<div class=\"container\">
+\t\t&copy; Joseph Odom ";
+        // line 28
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
+        echo "
+\t</div>
+</footer>
 
 </body>
 
 </html>";
+    }
+
+    // line 22
+    public function block_body($context, array $blocks = array())
+    {
     }
 
     public function getTemplateName()
@@ -57,7 +76,7 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 
     public function getDebugInfo()
     {
-        return array (  38 => 15,  27 => 7,  19 => 1,);
+        return array (  63 => 22,  52 => 28,  45 => 23,  43 => 22,  20 => 1,);
     }
 
     public function getSourceContext()
@@ -68,17 +87,30 @@ class __TwigTemplate_4e4677b43e035851450c69aea89859f3718720f297d091610ab5cd78a4b
 <head>
 <meta charset=\"utf-8\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-<title>{{ title }}</title>
+<title>Facebook Login API Example</title>
 <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\">
+<link rel=\"stylesheet\" href=\"assets/css/frontend.css\">
 </head>
 
 <body>
 
 <header id=\"header\">
 \t<div class=\"container\">
-\t\t<h1>{{ title }}</h1>
+\t\t<h1>Facebook Login API Example</h1>
 \t</div>
 </header>
+
+<main id=\"main\">
+\t<div class=\"container\">
+\t\t{% block body %}{% endblock %}
+\t</div>
+</main>
+
+<footer id=\"footer\">
+\t<div class=\"container\">
+\t\t&copy; Joseph Odom {{ 'now'|date('Y') }}
+\t</div>
+</footer>
 
 </body>
 

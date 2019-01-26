@@ -1,0 +1,6 @@
+app:
+  debug: false
+
+facebook:
+  public: your-fb-app-id
+  secret: your-fb-app-secret-key
