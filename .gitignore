@@ -1,3 +1,4 @@
+twig/cache/*
 vendor/
 
 settings.yaml

@@ -1,6 +1,9 @@
 app:
   debug: false
+  domain: https://example.com
+  root: /facebook-login/
 
 facebook:
   public: your-fb-app-id
+  redirect: fbhook
   secret: your-fb-app-secret-key
